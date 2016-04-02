@@ -9,32 +9,56 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.sadman.whichwolf.MainActivity"
+    tools:context="com.example.sadman.whichwolf"
     tools:showIn="@layout/activity_main">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Take photo"
-        android:onClick="takePhoto"
+
+    <ImageView
+        android:id="@+id/mainLogo"
+        android:layout_width="225dp"
+        android:layout_height="225dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo"
+        android:layout_marginTop="28dp"
+        />
+    <TextView
+        xmlns:custom="http://schemas.android.com/apk/res/com.example.sadman.whichwolf"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:id="@+id/text1"
+        android:text="@string/appname"
+        android:textStyle="bold"
+        android:textColor="@color/logoColor"
+        android:textColorHighlight="@color/logoHighlight"
+        android:textIsSelectable="false"
+        android:textSize="50sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="245dp"
+        android:gravity="center"
+        />
+
+    <ImageButton
         android:id="@+id/photoButton"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:background="@drawable/circlebackground"
+        android:layout_centerHorizontal="true"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="375dp"
+        android:onClick="takePhoto"
+
+        android:src="@drawable/camera"/>
+
+
+
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/capturePhotoImageView"
         android:layout_above="@id/photoButton"
+
+        android:layout_marginTop="300dp"
         />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Use Gallery"
-        android:onClick="useGallery"
-        android:id="@+id/galleryButton"
-        android:layout_below="@+id/photoButton"
-        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
