@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             Bundle extras = data.getExtras(); //formatting the DATA
             Bitmap photoBitmap = (Bitmap) extras.get("data");  //THIS GIVES US THE THUMBNAIL RETURNED BY THE CAMERA ACTIVITY!
             mPhotoCapturedImageView.setImageBitmap(photoBitmap);
-            Toast.makeText(MainActivity.this, "Photo Captured!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "Photo taken!", Toast.LENGTH_SHORT).show();
         }
     }
     //the following function was made to store the actual full size image (maybe the thumbnail is sufficient) HOW TO IMPORT FILE CLASS
