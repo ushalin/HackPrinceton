@@ -74,16 +74,17 @@ public class MainActivity extends AppCompatActivity {
             mPhotoCapturedImageView.setImageBitmap(photoBitmap);
             Toast.makeText(MainActivity.this, "Photo taken!", Toast.LENGTH_SHORT).show();
         }
+        //else if (requestCode == )
     }
     //the following function was made to store the actual full size image (maybe the thumbnail is sufficient) HOW TO IMPORT FILE CLASS
-    void createImageFile (){
+    /*void createImageFile (){
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date()); //allows files to have unique names
         String fileName = "IMAGE_" + timeStamp + "_";
-        File storageDirectory = Evironment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+        File storageDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
 
        // .... Do we even need to do this!??!?!?
 
-    }
+    }*/
 /*
     //ACCESSING THE GALLERY NOT SURE IF THIS REALLY WORKS OR NAH
 
@@ -93,4 +94,9 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(callGallery, startCameraCode);//first param is the intent, second is the identifier
     }
 */
+    public void useGallery(View view) {
+        Intent callGallery = new Intent(Intent.ACTION_PICK,
+                android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        //startActivityForResult(callGallery, );
+    }
 }
