@@ -15,8 +15,8 @@
 
     <ImageView
         android:id="@+id/mainLogo"
-        android:layout_width="225dp"
-        android:layout_height="225dp"
+        android:layout_width="245dp"
+        android:layout_height="245dp"
         android:layout_centerHorizontal="true"
         android:src="@drawable/logo"
         android:layout_marginTop="28dp"
@@ -52,13 +52,19 @@
 
 
     <ImageView
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="match_parent"
         android:id="@+id/capturePhotoImageView"
         android:layout_above="@id/photoButton"
-
-        android:layout_marginTop="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
         />
-
+    <ProgressBar
+        android:id="@+id/loadingPanel1"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="375dp"
+        android:indeterminate="true" />
 
 </RelativeLayout>
